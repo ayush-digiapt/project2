@@ -1,0 +1,155 @@
+{
+	"variables": [],
+	"info": {
+		"name": "New_projects",
+		"_postman_id": "39e253b1-c704-d658-67f2-ec8a42c87438",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"url": "http://localhost:3000/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"email\":\"ayush@gmail.com\",\n\t\"password\":\"1234567890\"\n}\n"
+				},
+				"description": "API for login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/editUser",
+			"request": {
+				"url": "http://localhost:3000/users/editUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\":\"ayush\",\n\t\"last_name\":\"ranka\",\n\t\"email\":\"ayush566@hotmail.in\",\n    \"mobile\":9876543210,\n\t\"address\":\" mp\"\n}"
+				},
+				"description": "edit user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/getAllUsers",
+			"request": {
+				"url": "http://localhost:3000/users/getAllUsers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/getOneUser/:email",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/users/getOneUser/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"getOneUser",
+						":email"
+					],
+					"query": [],
+					"variable": [
+						{
+							"key": "email",
+							"value": ""
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"hello@gmail.com\"\n}"
+				},
+				"description": "get one user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/createUser",
+			"request": {
+				"url": "http://localhost:3000/users/createUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"first_name\": \"ayush\",\n        \"last_name\": \"ranka\",\n        \"email\": \"g@hotmail.in\",\n        \"password\":\"1234567890\",\n        \n       \n        \"address\": \" dooddanekunji  bangalore\"\n}"
+				},
+				"description": "API for create-users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/getOneUserForEdit",
+			"request": {
+				"url": "http://localhost:3000/users/getOneUserForEdit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"ayush566@hotmail.in\"\n}"
+				},
+				"description": "get-user-for-edit"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/deleteUser",
+			"request": {
+				"url": "http://localhost:3000/users/deleteUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"g@hotmail.in\"\n}"
+				},
+				"description": "delete users"
+			},
+			"response": []
+		}
+	]
+}
