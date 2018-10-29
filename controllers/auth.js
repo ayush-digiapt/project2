@@ -69,8 +69,8 @@ exports.nodemailer = function(req,res)
     var mailOptions = {
       from: req.body.email1,
       to: req.body.email2,
-      subject: 'Sending Email using Node.js',
-      text: 'using post method.......'
+      subject: req.body.subject,
+      text: req.body.text
       
     };
     
