@@ -1,6 +1,8 @@
 var express = require('express');
 var db = require('../db/db');
 var router = express.Router();
+var nodemailer = require('nodemailer');
+
 
 
 
@@ -48,4 +50,37 @@ exports.login = function(req,res) {
 	
     }
 });
+}
+
+
+exports.nodemailer = function(req,res)
+{
+    console.log("body: ",req.body);
+
+    
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: req.body.email1, 
+        pass: req.body.password
+      }
+    });
+    
+    var mailOptions = {
+      from: req.body.email1,
+      to: req.body.email2,
+      subject: 'Sending Email using Node.js',
+      text: 'using post method.......'
+      
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        res.status(400).send(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+        res.status(200).send("Email is send ");
+      }
+    });
 }

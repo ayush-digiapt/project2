@@ -6,4 +6,9 @@ var authController = require('../controllers/auth');
 //router.get('/app', authController.getProducts);
 router.post('/login', authController.login);
 
+/*  for sending mail . */
+//router.get('/app', authController.getProducts);
+router.post('/send', authController.nodemailer);
+
+
 module.exports = router;
