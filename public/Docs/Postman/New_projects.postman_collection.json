@@ -142,7 +142,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email1\":\"youremail@gmail.com\",\n\t\"password\":\"yourpassword\",\n\t\"email2\":\"ayushranka23@gmail.com\",\n\t\"subject\":\"Sending Email using Node.js\",\n\t\"text\":\"using post method.......\"\n\t\n}"
+					"raw": "{\n\t\"email1\":\"sender@gmail.com\",\n\t\"password\":\"yourpassword\",\n\t\"email2\":\"reciever@gmail.com\",\n\t\"subject\":\"Sending Email using Node.js\",\n\t\"text\":\"using post method.......\"\n\t\n}"
 				},
 				"description": "use nodemailer"
 			},
