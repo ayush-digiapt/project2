@@ -111,7 +111,7 @@
 		{
 			"name": "{{baseUrl}}/users/:ID",
 			"request": {
-				"url": "{{baseUrl}}/users/7",
+				"url": "{{baseUrl}}/users/9",
 				"method": "DELETE",
 				"header": [
 					{
@@ -122,9 +122,29 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\":\"g@hotmail.in\"\n}"
+					"raw": "{\n\t\"email\":\"ayushranka13@gmail\"\n}"
 				},
 				"description": "delete users"
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/auth/send",
+			"request": {
+				"url": "{{baseUrl}}/auth/send",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email1\":\"ayushranka015@gmail.com\",\n\t\"password\":\"Ayushranka15@\",\n\t\"email2\":\"ayushranka23@gmail.com\",\n\t\"subject\":\"Sending Email using Node.js\",\n\t\"text\":\"using post method.......\"\n\t\n}"
+				},
+				"description": "use nodemailer"
 			},
 			"response": []
 		}
